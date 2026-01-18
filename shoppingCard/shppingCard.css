@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 10px;
+    padding: 10px ;
+    background-color: azure;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.btn{
+    background-color: rgb(96, 255, 192);
+    height: 30px;
+    padding: 3px;
+    border-radius: 10px;
+}

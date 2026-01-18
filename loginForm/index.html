@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <p>Enter your name: <span id="name"></span></p>
+    <form>
+        <input type="text" id="txn" />
+    </form>
+
+    <h3>Enter Password: <span id="password"></span></h3>
+    
+        <input type="text" id="txp" />
+        <button type="button" id="btn">check</button>
+        <span id="alert"></span>
+    
+
+    <script>
+        document.getElementById("txn").addEventListener("keyup", function (e) {
+
+            document.getElementById("name").innerText = e.target.value.toUpperCase();
+            e.target.value = e.target.value.toUpperCase();
+        });
+
+        document.getElementById("btn").addEventListener("click", function () {
+            const passwordValue = document.getElementById("txp").value;
+            document.getElementById("password").innerText = passwordValue;
+            
+            if (passwordValue.length >= 6) {
+
+                document.getElementById("alert").innerText ="Your Id is validate";
+                document.getElementById("alert").style.color= "green";
+            } else {
+                document.getElementById("alert").innerText ="Your Id is not validate"
+                document.getElementById("alert").style.color= "red";
+            }
+        })
+    </script>
+</body>
+
+</html>
